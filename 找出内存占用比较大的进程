@@ -1,0 +1,11 @@
+
+
+找出内存消耗比较大的
+ps -A --sort -rss -o comm,pmem,pcpu |uniq -c |head -15
+
+那如何统计某个进程消耗的cpu，比如统计php-cgi消耗的cpu，
+ps -eo pcpu,pid,user,args | grep php-cgi | awk  -v  sum=0 '{sum += $1} END{print sum}'
+执行上面的命令，我机器上的结果是144.5，这是在所有核的总和，除以cpu的核数就可以得到每个核的平均负载。
+
+查看一个进程的详细情况
+pmap $(pgrep php-fon |head -1)
