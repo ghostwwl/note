@@ -1,0 +1,29 @@
+网上大部分都是win下屏蔽youku 广告的
+
+平时公司上班用 linux  记录下 我咋去优酷的 
+
+#1. 第一步
+cd /home/your account[你的账户名]/.macromedia/Flash_Player/#SharedObjects/a random dir[一个随机串目录]
+rm -rf static.youku.com statics.youku.com
+touch static.youku.com
+touch statics.youku.com
+
+# 第二部 修改/etc/hosts
+127.0.0.1 atm.youku.com
+127.0.0.1 Fvid.atm.youku.com
+127.0.0.1 html.atm.youku.com
+127.0.0.1 valb.atm.youku.com
+127.0.0.1 valf.atm.youku.com
+127.0.0.1 valo.atm.youku.com
+127.0.0.1 valp.atm.youku.com
+127.0.0.1 lstat.youku.com
+127.0.0.1 speed.lstat.youku.com
+127.0.0.1 urchin.lstat.youku.com
+127.0.0.1 stat.youku.com
+127.0.0.1 static.lstat.youku.com
+127.0.0.1 valc.atm.youku.com
+127.0.0.1 vid.atm.youku.com
+127.0.0.1 walp.atm.youku.com
+
+
+这个时候你再去瞅youku呢 广告和谐了
