@@ -1,0 +1,2 @@
+这种写法好久以前用过 今天整理代码找出来了
+python -c 'a=open("pyparsing.py","rb");print a.read();a.close();'|wc -l
