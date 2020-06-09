@@ -1,4 +1,3 @@
-
 # docker 记录
 
 
@@ -154,7 +153,9 @@
     
 - docker inspect <image|container> 查看image或container的底层信息
     - docker inspect $CONTAINER_ID
-    - 查看容器ip `docker inspect $CONTAINER_ID|grep 'IPAddress'`
+    - 查看容器ip 
+        - `docker inspect $CONTAINER_ID|grep 'IPAddress'`
+        - `docker inspect -f '{{ .NetworkSettings.IPAddress }}' $CONTAINER_ID`
     
 - 寻找path路径下名为的Dockerfile的配置文件，使用此配置生成新的image
     - docker build <path> 
@@ -194,7 +195,7 @@
 - 这个时候最容易想到的是，我们可以通过多个容器 都挂载宿主机的同一个目录实现
 
 
-###　Docker部署私有仓库
+### Docker部署私有仓库
 - 首先需要有两台机器，一台作为仓库的Server，一台作为仓库的Client，用户通过Client来进行镜像的提交和拉取操作。
 - 在Server端启动registry容器
     - `docker run -d --name registry -p 5000:5000 -v /opt/data/registry:/var/lib/registry --restart=always registry`
@@ -225,9 +226,10 @@
     - `--blkio-weight` 权重值在 10 ~ 1000 之间
     - 指定特定设备的权重
         - `--blkio-weight-device="DEVICE_NAME:WEIGHT"`
-        -  可以指定某个设备的权重大小，如果同时指定 --blkio-weight 则以 --blkio-weight 为全局默认配置，针对指定设备以 `--blkio-weight-device` 指定设备值为主
+        -  可以指定某个设备的权重大小，如果同时指定 `--blkio-weight` 则以 `--blkio-weight` 为全局默认配置，针对指定设备以 `--blkio-weight-device` 指定设备值为主
         - `docker run -it --rm --blkio-weight-device "/dev/sda:100" sauloal/ubuntu14.04 /bin/bash`
     - 限制读写入速度
         - `--device-read-bps、--device-write-bps`
         - 限制写入速度1m `--device-write-bps /dev/sda:1mb`
         - 限制读出速度1m `--device-read-bps /dev/sda:1mb`
+
