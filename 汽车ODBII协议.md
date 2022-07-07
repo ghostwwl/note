@@ -72,9 +72,9 @@ OBD2 标准按如下顺序一步步推出：
 
 ## 故障码常见分组
 
-| 故障码模式 | 分组 | 
-| :----- | ：----- | 
-| P00XX | Fuel and Air Metering and Auxiliary Emission Controls | 
+| 故障码模式 | 分组 |
+| :----- | :----- | 
+| P00XX | 燃料和空气计量和辅助排放控制 | 
 | P01XX | 燃油和进气系统 | 
 | P02XX | 燃油和进气系统 | 
 | P03XX | 点火系统 | 
@@ -85,7 +85,7 @@ OBD2 标准按如下顺序一步步推出：
 | P08XX | 变速箱控制系统 | 
 | P09XX | 变速箱控制系统 | 
 | P0AXX | 混合动力 | 
-| P10XX | Manufacturer Controlled Fuel and Air Metering and Auxiliary Emission Controls | 
+| P10XX | 制造商控制的燃料和空气计量和辅助排放控制 | 
 | P11XX | 燃油和进气系统 | 
 | P12XX | 燃油和空气计量 | 
 | P13XX | 点火系统 | 
