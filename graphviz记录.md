@@ -606,25 +606,3 @@ digraph structs {
 
 
 
-```python
-
-from sklearn.tree import DecisionTreeClassifier
-
-# Decision Tree
-model=DecisionTreeClassifier()
-model.fit(X_train, y_train)
-prediction = model.predict(X_test)
-print('The accuracy of the Decision Tree is: {0}'.format(metrics.accuracy_score(prediction,y_test)))
-
-from sklearn.tree import export_graphviz
-export_graphviz(
-            model,
-            out_file="./iris_tree.dot",
-            feature_names=iris.feature_names,
-            class_names=iris.target_names,
-            rounded=True,
-            filled=True
-        )
-
-
-```
