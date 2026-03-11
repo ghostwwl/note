@@ -1,6 +1,5 @@
 # 基于百科的多义词消歧义
-分析 刘焕勇 的测试代码
-`/project/python/WordMultiSenseDisambiguation`
+分析 刘焕勇 WordMultiSenseDisambiguation 的测试代码
 
 ## 0. 输入
 - 包含要消歧的词语的句子 S
