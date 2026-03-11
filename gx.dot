@@ -1,1 +1,70 @@
 
+digraph structs {
+    node[shape=record]
+    dpi=300;
+    rankdir=TB;  //Rank Direction Left to Right
+    // bgcolor="transparent";//背景透明
+    
+    app_r [label="{天一生水壬与子，地六成之癸与亥| 地二生火丁与巳，天七成之丙与午 | 天三生木甲与寅，地八成之乙与卯| 地四生金辛与酉，天九成之庚与申 | 天五生土戊与辰，地十成之己与未 }|{  肾应之水，吹气出于肺，属阴，故寒 | 心应之火，呵者贺也，怨也 | 肝应之木，嘘气出丹田，属阳，故温 | 肺应之金，呬，鼻中出气 | 脾应之土，呼，外息也，一呼一吸为一息 }", shape="record"];
+	   
+   
+    
+    dizhi [label="{{{<5>巳}|<4>午|<3>未|{<2>申} }|{ {<6>辰|<7>卯} |{{|}|{|}}|{<1>酉|<0>戌}}|{{<8>寅}|<9>丑|<10>子|{<11>亥} }}"];
+    
+    bagua [label="<0>震☳巽☴|<1>离☲|<2>坤☷艮☶|<3>乾☰兑☱|<4>坎☵"]
+    
+    // fangwei [label="{{东南|南|西南} | {东|中|西}  |  {东北|北|西北}}"]
+    
+    
+    wuxing [label="<0>木 3|<1>火 2|<2>土 5|<3>金 4|<4>水 1",]
+    tiangan [label="<0>甲乙|<1>丙丁|<2>戊己|<3>庚辛|<4>壬癸"]
+    siji [label="<0>春|<1>夏|<2>长夏|<3>秋|<4>冬"]
+    wei [label="<0>酸|<1>苦|<2>甘|<3>辛|<4>咸"]
+    se [label="<0>青、绿|<1>赤、红|<2>黄|<3>白|<4>黑"]
+    sheng [label="<0>宫|<1>商|<2>角|<3>徵|<4>羽"]
+    wufang [label="<0>东|<1>南|<2>中|<3>西|<4>北"]
+    wuzhang [label="<0>肝|<1>心|<2>脾|<3>肺|<4>肾"]
+    liufu [label="<0>胆|<1>小肠|<2>胃|<3>大肠|<4>三焦、膀胱"]
+    wuguan [label="<0>目|<1>舌|<2>口|<3>鼻|<4>耳"]
+    xingti [label="<0>筋|<1>脉|<2>肉|<3>皮毛|<4>骨"]
+    wuye [label="<0>泪|<1>汗|<2>涎|<3>涕|<4>唾"]
+    qingxu [label="<0>怒|<1>喜|<2>思|<3>悲|<4>恐"]
+    
+    
+    
+    wuxing:0 -> dizhi:8 [color="cyan3"]
+    wuxing:0 -> dizhi:7 [color="cyan3"]
+    
+    wuxing:1 -> dizhi:5 [color="red"]
+    wuxing:1 -> dizhi:4 [color="red"]
+    
+    wuxing:2 -> dizhi:6 [color="gold1"]
+    wuxing:2 -> dizhi:3 [color="gold1"]
+    wuxing:2 -> dizhi:9 [color="gold1"]
+    wuxing:2 -> dizhi:0 [color="gold1"]
+    
+    
+    wuxing:3 -> dizhi:2 [color="deepskyblue3"]
+    wuxing:3 -> dizhi:1 [color="deepskyblue3"]
+    
+    wuxing:4 -> dizhi:10 [color="black"]
+    wuxing:4 -> dizhi:11 [color="black"]
+    
+    
+    
+    wuxing:0 -> bagua:0 -> tiangan: 0 -> siji: 0 -> wei: 0  -> se: 0 -> sheng: 0 -> wufang: 0 [color="cyan3"]
+    wuxing:1 -> bagua:1 -> tiangan: 1 -> siji: 1 -> wei: 1  -> se: 1 -> sheng: 1 -> wufang: 1 [color="red"]
+    wuxing:2 -> bagua:2 -> tiangan: 2 -> siji: 2 -> wei: 2  -> se: 2 -> sheng: 2 -> wufang: 2  [color="gold1"]
+    wuxing:3 -> bagua:3 -> tiangan: 3 -> siji: 3 -> wei: 3  -> se: 3 -> sheng: 3 -> wufang: 3  [color="deepskyblue3"]
+    wuxing:4 -> bagua:4 -> tiangan: 4 -> siji: 4 -> wei: 4  -> se: 4 -> sheng: 4 -> wufang: 4 [color="black"]
+    
+    wufang: 0 -> wuzhang: 0 -> liufu:0 -> wuguan: 0  -> xingti: 0 -> wuye: 0 -> qingxu: 0  [color="cyan3"]
+    wufang: 1 -> wuzhang: 1 -> liufu:1 -> wuguan: 1  -> xingti: 1 -> wuye: 1 -> qingxu: 1 [color="red"]
+    wufang: 2 -> wuzhang: 2 -> liufu:2 -> wuguan: 2  -> xingti: 2 -> wuye: 2 -> qingxu: 2 [color="gold1"]
+    wufang: 3 -> wuzhang: 3 -> liufu:3 -> wuguan: 3  -> xingti: 3 -> wuye: 3 -> qingxu: 3 [color="deepskyblue3"]
+    wufang: 4 -> wuzhang: 4 -> liufu:4 -> wuguan: 4  -> xingti: 4 -> wuye: 4 -> qingxu: 4 [color="black"]
+    
+    
+    
+    
+}
